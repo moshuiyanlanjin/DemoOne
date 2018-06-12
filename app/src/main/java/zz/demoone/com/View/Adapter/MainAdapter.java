@@ -20,6 +20,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
 
     private Context context;
     private List<String> date;
+    private OnMainClike onMainClike;
     public MainAdapter(MainActivity mainActivity, List<String> strings) {
         this.context = mainActivity;
         this.date = strings;
@@ -33,12 +34,21 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.text.setText(date.get(position));
-
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onMainClike.onmainclikeitem(position);
+            }
+        });
     }
-
-    
+    public interface OnMainClike{
+        void onmainclikeitem(int position);
+    }
+    public void setOnMainClike(OnMainClike onMainClike){
+        this.onMainClike = onMainClike;
+    }
     @Override
     public int getItemCount() {
         return date.size();

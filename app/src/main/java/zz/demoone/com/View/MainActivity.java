@@ -51,5 +51,12 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
     public void SDetate(List<String> date) {
         Log.d("测试",date.get(0));
         MainAdapter adapter = new MainAdapter(MainActivity.this,date);
+        recy.setAdapter(adapter);
+        adapter.setOnMainClike(new MainAdapter.OnMainClike() {
+            @Override
+            public void onmainclikeitem(int position) {
+
+            }
+        });
     }
 }
