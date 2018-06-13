@@ -45,7 +45,7 @@ public class StorageActivity extends BaseActivity {
     private void initView() {
         String load = load();
         if(TextUtils.isEmpty(load)){
-
+            edit.setText(load);
         }
     }
 
