@@ -31,6 +31,7 @@
         <activity
             android:name=".View.BroadcastActivity"
             android:screenOrientation="landscape" />
+        <activity android:name=".View.StorageActivity" android:screenOrientation="landscape"/>
 
         <receiver
             android:name=".Broadcast.BootCompleteReceiver"

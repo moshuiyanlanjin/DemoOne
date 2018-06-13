@@ -72,7 +72,13 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
                         startActivity(intent);
                         break;
                     case 2:
+                        //广播
                         intent = new Intent(MainActivity.this,BroadcastActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        //存储
+                        intent = new Intent(MainActivity.this,StorageActivity.class);
                         startActivity(intent);
                         break;
                 }

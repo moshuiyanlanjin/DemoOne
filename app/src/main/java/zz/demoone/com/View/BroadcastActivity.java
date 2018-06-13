@@ -57,6 +57,7 @@ public class BroadcastActivity extends BaseActivity {
         super.onDestroy();
         //取消注册
         unregisterReceiver(networkChangeReceiver);
+        localBroadcastManager.unregisterReceiver(lostBroadcastReceiver);
     }
 
     private void initView() {
