@@ -14,6 +14,7 @@ public class Mainmodelimple implements Mainmodler{
     public void GetDate(CreateDate createDate) {
         date.add("fragment");
         date.add("activity的临时数据");
+        date.add("安卓的广播");
         createDate.getlistdate(date);
     }
 }

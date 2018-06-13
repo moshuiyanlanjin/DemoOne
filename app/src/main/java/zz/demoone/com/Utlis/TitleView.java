@@ -15,7 +15,7 @@ import zz.demoone.com.R;
  * 自定义标题头
  */
 
-public class TitleView extends LinearLayout{
+public  class TitleView extends LinearLayout{
 
     TextView back;
     TextView start;

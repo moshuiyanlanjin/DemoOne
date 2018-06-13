@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <zz.demoone.com.Utlis.TitleView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </zz.demoone.com.Utlis.TitleView>
+    <FrameLayout
+        android:id="@+id/fragmentes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/buttgroup"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/butt1"
+            style="@style/MainRadioButton"
+            android:text="测试1"
+            android:checked="true"
+            android:drawableTop="@drawable/main_selece"/>
+        <RadioButton
+            android:id="@+id/butt2"
+            style="@style/MainRadioButton"
+            android:text="测试2"
+            android:drawableTop="@drawable/main_selece"/>
+        <RadioButton
+            android:id="@+id/butt3"
+            style="@style/MainRadioButton"
+            android:text="测试3"
+            android:drawableTop="@drawable/main_selece"/>
+        <RadioButton
+            android:id="@+id/butt4"
+            style="@style/MainRadioButton"
+            android:text="测试4"
+            android:drawableTop="@drawable/main_selece"/>
+    </RadioGroup>
+</LinearLayout>

@@ -2,21 +2,52 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="zz.demoone.com">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
+        android:name=".View.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".View.App"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.MainActivity" android:screenOrientation="landscape">
+        <activity
+            android:name=".View.MainActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".View.FragmentesActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".View.SaveandRestActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".View.BroadcastActivity"
+            android:screenOrientation="landscape" />
+
+        <receiver
+            android:name=".Broadcast.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="zz.demoone.com.my"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

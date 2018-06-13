@@ -1,5 +1,6 @@
 package zz.demoone.com.View;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import zz.demoone.com.Interface.MainInterface;
 import zz.demoone.com.Presenter.MainPresenter;
 import zz.demoone.com.R;
 import zz.demoone.com.Utlis.TitleView;
+import zz.demoone.com.Utlis.ToastUtlis;
 import zz.demoone.com.View.Adapter.MainAdapter;
 
 /**
@@ -34,6 +36,8 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
         ButterKnife.bind(this);
         MainPresenter presenter = new MainPresenter(this);
         presenter.LatDate();
+
+        initView();
     }
 
     @Override
@@ -41,21 +45,37 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
 
     }
 
-    @Override
     public void initView() {
-        LinearLayoutManager manager = new LinearLayoutManager(MainActivity.this);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
         recy.setLayoutManager(manager);
+
     }
 
     @Override
-    public void SDetate(List<String> date) {
+    public void SDetate(final List<String> date) {
         Log.d("测试",date.get(0));
+
         MainAdapter adapter = new MainAdapter(MainActivity.this,date);
         recy.setAdapter(adapter);
         adapter.setOnMainClike(new MainAdapter.OnMainClike() {
             @Override
             public void onmainclikeitem(int position) {
-
+                ToastUtlis.showtoast(MainActivity.this,date.get(position));
+                Intent intent;
+                switch (position){
+                    case 0:
+                        intent = new Intent(MainActivity.this,FragmentesActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(MainActivity.this,SaveandRestActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(MainActivity.this,BroadcastActivity.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
     }

@@ -11,7 +11,7 @@ import butterknife.ButterKnife;
 
 public class App extends Application {
 
-    public Context Appcontext;
+    public static Context Appcontext;
     @Override
     public void onCreate() {
         super.onCreate();

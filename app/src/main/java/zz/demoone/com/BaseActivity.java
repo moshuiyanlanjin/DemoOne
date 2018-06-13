@@ -18,13 +18,13 @@ public abstract class BaseActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         Log.d("活动名：",getClass().getSimpleName());
         ActivityCollector.addavtivity(this);
-        initView();
+      //  initView();
         initDate();
     }
 
     protected abstract void initDate();
 
-    public abstract void initView();
+   // public abstract void initView();
 
     @Override
     protected void onDestroy() {
