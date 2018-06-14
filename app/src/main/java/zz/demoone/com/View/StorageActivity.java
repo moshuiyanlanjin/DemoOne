@@ -44,9 +44,23 @@ public class StorageActivity extends BaseActivity {
 
     private void initView() {
         String load = load();
-        if(TextUtils.isEmpty(load)){
+        if(!TextUtils.isEmpty(load)){
             edit.setText(load);
         }
+        title.setTitlename("文件储存");
+        title.SetOnTitleCleke(new TitleView.OnTitleCleke() {
+            @Override
+            public void finsh1() {
+                finish();
+            }
+
+            @Override
+            public void starte1() {
+
+            }
+
+
+        });
     }
 
     @Override

@@ -64,14 +64,16 @@ public class BroadcastActivity extends BaseActivity {
         title.setTitlename("广播");
         title.SetOnTitleCleke(new TitleView.OnTitleCleke() {
             @Override
-            public void finsh() {
-                finsh();
+            public void finsh1() {
+                finish();
             }
 
             @Override
-            public void starte() {
+            public void starte1() {
 
             }
+
+
         });
     }
 

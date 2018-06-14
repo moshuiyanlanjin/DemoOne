@@ -81,6 +81,10 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
                         intent = new Intent(MainActivity.this,StorageActivity.class);
                         startActivity(intent);
                         break;
+                    case 4:
+                        intent = new Intent(MainActivity.this,MySqliteActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });

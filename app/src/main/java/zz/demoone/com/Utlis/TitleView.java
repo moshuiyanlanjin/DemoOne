@@ -27,7 +27,7 @@ public  class TitleView extends LinearLayout{
 
     public TitleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.view_title, this);
+        View view = LayoutInflater.from(context).inflate(R.layout.view_title, this);
         back = findViewById(R.id.back);
         start = findViewById(R.id.start);
         titlename = findViewById(R.id.title_name);
@@ -38,19 +38,20 @@ public  class TitleView extends LinearLayout{
         back.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-               onTitleCleke.finsh();
+
+               onTitleCleke.finsh1();
             }
         });
         start.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-               onTitleCleke.starte();
+               onTitleCleke.starte1();
             }
         });
     }
     public interface OnTitleCleke{
-        void finsh();
-        void starte();
+        void finsh1();
+        void starte1();
     }
     public void SetOnTitleCleke(OnTitleCleke onTitleCleke){
         this.onTitleCleke = onTitleCleke;

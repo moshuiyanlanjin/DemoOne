@@ -16,6 +16,7 @@ public class Mainmodelimple implements Mainmodler{
         date.add("activity的临时数据");
         date.add("安卓的广播");
         date.add("文件储存");
+        date.add("Sqlite");
         createDate.getlistdate(date);
     }
 }
