@@ -3,6 +3,8 @@ package zz.demoone.com.View;
 import android.app.Application;
 import android.content.Context;
 
+import org.litepal.LitePal;
+
 import butterknife.ButterKnife;
 
 /**
@@ -16,6 +18,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         Appcontext = this;
-
+        LitePal.initialize(this);
     }
 }

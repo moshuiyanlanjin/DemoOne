@@ -33,6 +33,7 @@
             android:screenOrientation="landscape" />
         <activity android:name=".View.StorageActivity" android:screenOrientation="landscape"/>
         <activity android:name=".View.MySqliteActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".View.MyLitePalActivity" android:screenOrientation="landscape"/>
 
         <receiver
             android:name=".Broadcast.BootCompleteReceiver"

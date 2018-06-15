@@ -17,6 +17,7 @@ public class Mainmodelimple implements Mainmodler{
         date.add("安卓的广播");
         date.add("文件储存");
         date.add("Sqlite");
+        date.add("LitePal");
         createDate.getlistdate(date);
     }
 }
