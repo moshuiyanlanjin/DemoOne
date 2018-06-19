@@ -88,6 +88,15 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
                     case 5:
                         intent = new Intent(MainActivity.this,MyLitePalActivity.class);
                         startActivity(intent);
+                        break;
+                    case 6:
+                        intent = new Intent(MainActivity.this,MyContentResolver.class);
+                        startActivity(intent);
+                        break;
+                    case 7:
+                        intent = new Intent(MainActivity.this,MyMultimediaActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });

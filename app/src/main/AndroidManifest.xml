@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name=".View.App"
@@ -34,6 +35,9 @@
         <activity android:name=".View.StorageActivity" android:screenOrientation="landscape"/>
         <activity android:name=".View.MySqliteActivity" android:screenOrientation="landscape"/>
         <activity android:name=".View.MyLitePalActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".View.MyContentResolver" android:screenOrientation="landscape"/>
+        <activity android:name=".View.AddressBookActivity" android:screenOrientation="landscape"/>
+
 
         <receiver
             android:name=".Broadcast.BootCompleteReceiver"

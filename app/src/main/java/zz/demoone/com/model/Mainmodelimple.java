@@ -18,6 +18,8 @@ public class Mainmodelimple implements Mainmodler{
         date.add("文件储存");
         date.add("Sqlite");
         date.add("LitePal");
+        date.add("内容提供者");
+        date.add("多媒体");
         createDate.getlistdate(date);
     }
 }
