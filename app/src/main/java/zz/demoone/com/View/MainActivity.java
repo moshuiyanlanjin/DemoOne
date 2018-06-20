@@ -97,6 +97,10 @@ public class MainActivity extends BaseActivity implements MainInterface.View{
                         intent = new Intent(MainActivity.this,MyMultimediaActivity.class);
                         startActivity(intent);
                         break;
+                    case 8:
+                        intent = new Intent(MainActivity.this,PhotographActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });

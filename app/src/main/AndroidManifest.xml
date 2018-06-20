@@ -5,6 +5,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!--相机相关权限-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.Camera"/>
+
+
 
     <application
         android:name=".View.App"
@@ -37,6 +44,7 @@
         <activity android:name=".View.MyLitePalActivity" android:screenOrientation="landscape"/>
         <activity android:name=".View.MyContentResolver" android:screenOrientation="landscape"/>
         <activity android:name=".View.AddressBookActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".View.PhotographActivity" android:screenOrientation="landscape"/>
 
 
         <receiver
@@ -55,6 +63,16 @@
                 <action android:name="zz.demoone.com.my"/>
             </intent-filter>
         </receiver>
+        
+        <provider
+            android:authorities="zz.demoone.com.View.PhotographActivity"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
     </application>
 
 </manifest>

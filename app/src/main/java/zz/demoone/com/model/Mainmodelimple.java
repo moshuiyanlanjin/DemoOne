@@ -20,6 +20,7 @@ public class Mainmodelimple implements Mainmodler{
         date.add("LitePal");
         date.add("内容提供者");
         date.add("多媒体");
+        date.add("摄像头及相册");
         createDate.getlistdate(date);
     }
 }
